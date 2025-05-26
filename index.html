@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're Invited!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Libre Baskerville', serif;
+      background-color: #f8f8f8;
+      color: #111;
+    }
+    .flap {
+      width: 0;
+      height: 0;
+      border-left: 192px solid transparent;
+      border-right: 192px solid transparent;
+      border-top: 120px solid #d1d5db;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform-origin: top center;
+      transition: transform 0.7s ease-in-out;
+      z-index: 20;
+    }
+    .seal {
+      width: 60px;
+      height: 60px;
+      background-color: #b91c1c;
+      border: 4px solid #7f1d1d;
+      border-radius: 50%;
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 30;
+      box-shadow: 0 0 6px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #fff;
+      font-weight: bold;
+      font-family: 'Libre Baskerville', serif;
+      transition: transform 1s ease, opacity 0.5s ease;
+    }
+    .z-10 .text-center .px-6 .pointer-events-none{
+      display: inline;
+      margin-top:100px;
+
+    }
+    .rotate-open {
+      transform: rotateX(180deg);
+    }
+    .seal-rotate {
+      transform: rotate(720deg) scale(0);
+      opacity: 0;
+    }
+    .invitation-letter {
+      background-color: #fefae0;
+      padding: 3rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+      font-family: 'Libre Baskerville', serif;
+    }
+    .script-font {
+      font-family: 'Dancing Script', cursive;
+    }
+    @media (max-width: 600px) {
+        #envelope {
+            width: 90%; /* Set width to 80% */
+            height: 250px; /* Set height to auto to maintain aspect ratio */
+            margin: 0 auto; /* Center the envelope */
+        }
+        .flap {
+            border-left: 160px solid transparent; /* Adjust flap size */
+            border-right: 160px solid transparent;
+            border-top: 120px solid #d1d5db; /* Adjust flap size */
+        }
+        .seal {
+            width: 40px; /* Adjust seal size */
+            height: 40px;
+            font-size: 12px; /* Adjust font size for smaller screens */
+        }
+        #invitation {
+            width: 95%; /* Set the invitation width to 80% */
+            margin: 0 auto; /* Center the invitation */
+        }
+        .invitation-letter {
+            padding: 2rem; /* Adjust padding for the invitation letter */
+        }
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-200">
+
+  <!-- Envelope -->
+  <div id="envelope" class="relative w-96 h-60 bg-white shadow-lg border-2 border-black cursor-pointer flex items-center justify-center transition-all duration-700" onclick="openEnvelope()">
+    <div id="flap" class="flap"></div>
+    <div id="seal" class="seal">J & J</div>
+    <div class="absolute top-[160px] left-1/2 transform -translate-x-1/2 text-center px-4 pointer-events-none z-10">
+      <h2 class="text-xl font-bold">You're Invited!</h2>
+      <p class="text-sm mt-1 italic">Click to Open</p>
+    </div>
+    
+  </div>
+  
+
+  <!-- Invitation Content -->
+  <div id="invitation" class="hidden absolute inset-0 flex items-center justify-center bg-gray-200 p-4">
+    <div class="invitation-letter max-w-2xl w-full text-center space-y-6">
+      <h1 class="script-font text-4xl text-gray-800">You're Invited to Our Wedding</h1>
+
+      <p class="text-lg text-gray-700">Together with our families</p>
+
+      <h2 class="script-font text-5xl text-rose-800">Jhom & Jhie</h2>
+
+      <p class="text-lg text-gray-700">joyfully invite you to celebrate our union in love</p>
+
+      <div class="pt-2">
+        <p class="text-base text-gray-700"><strong>Wednesday, June 18th, 2025</strong></p>
+        <p class="text-base text-gray-700">at 2:00 in the afternoon</p>
+        <p class="text-base text-gray-700">Holy Family Shrine Parish <br>Panal, Tabaco City</p>
+      </div>
+
+      <div class="pt-4 border-t border-gray-300 mt-4">
+        <p class="text-sm italic text-gray-500">Reception to follow</p>
+        <p class="text-sm italic text-gray-500">Formal attire requested</p>
+      </div>
+
+      <a href="landingpage.html" class="mt-6 inline-block px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">
+        View Wedding Site
+      </a>
+      
+    </div>
+  </div>
+
+  <!-- Sound -->
+  <audio id="sealSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1537bc1834.mp3?filename=paper-folding-1-1537.mp3"></audio>
+
+  <script>
+    function openEnvelope() {
+      document.getElementById('flap').classList.add('rotate-open');
+      document.getElementById('seal').classList.add('seal-rotate');
+      document.getElementById('sealSound').play();
+      document.getElementById('envelope').classList.add('opacity-0');
+
+      setTimeout(() => {
+        document.getElementById('envelope').style.display = 'none';
+        document.getElementById('invitation').classList.remove('hidden');
+      }, 1000);
+    }
+
+    function goBack() {
+      location.reload(); // reloads the page for full reset
+    }
+  </script>
+</body>
+</html>

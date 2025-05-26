@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Guest List | Jhie & Jhom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville&display=swap" rel="stylesheet" />
+  <style>
+body {
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+  background: #fffdf7;
+  color: #4b2e2e;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+  background: #f8e8d0;
+  border-bottom: 2px solid #e6d5b8;
+}
+
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #a97455;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #7b5c45;
+}
+
+.guest-list {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.guest-group {
+  background-color: #fff8f0;
+  border: 1px solid #e6d5b8;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.guest-group h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: #a97455;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.guest-group ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  display: grid; /* Use grid layout for the guest list */
+  grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+  gap: 0.5rem; /* Space between names */
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  .guest-list {
+    grid-template-columns: 1fr; /* One column for mobile */
+  }
+
+  .guest-group {
+    grid-column: span 1; /* Each group occupies one column */
+  }
+
+  .guest-group ul {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for family */
+  }
+  .guest-group .single{
+    display: block;
+  }
+
+  /* Add a new grid for friends and ninong & ninang */
+  .friends-ninong {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for friends and ninong & ninang */
+    gap: 2rem; /* Gap between the two sections */
+  }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .guest-group ul {
+    grid-template-columns: 1fr; /* One column for mobile */
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #b2927e;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Beloved Guests</h1>
+    <p>Thank you for being a part of our love story. We’re honored to have you celebrate our special day with us!</p>
+  </header>
+
+  <main class="guest-list">
+    <div class="guest-group">
+      <h3>Family & Close Friends</h3>
+      <ul>
+        <li>Josefino Dioquino</li>
+        <li>Editha Dioquino</li>
+        <li>Jose Bataller</li>
+        <li>Rosa Bataller</li>
+        <li>Mark Jesson Bataller</li>
+        <li>Clarence Bataller</li>
+        <li>Jomar Bataller</li>
+        <li>Angelyn Bataller</li>
+        <li>Anjo Josef Bataller</li>
+        <li>Joanna Marie Bataller</li>
+        <li>Sherly Bonaobra</li>
+        <li>Jimmy Besorio</li>
+        <li>Sherylyn Bonaobra</li>
+        <li>Sheena Mae Besorio</li>
+        <li>Jasper Besorio</li>
+        <li>Nanita Mata</li>
+        <li>Donita Rose Bonaobra</li>
+        <li>Joven Bonaobra</li>
+        <li>Judith Barrameda</li>
+        <li>Dan Bonaobra</li>
+        <li>Jean Bordeos</li>
+        <li>Kimberly Paguio</li>
+        <li>Jenalyn Bonaobra</li>
+        <li>Fe Bataller</li>
+        <li>Shaira Bataller</li>
+        <li>Shiela Oronan</li>
+        <li>Diogenes Bataller</li>
+        <li>Ning Bataller</li>
+        <li>Salvador Bataller</li>
+        <li>Juan Buddy</li>
+        <li>Nelben Bonaobra</li>
+        <li>Gloria Bermundo</li>
+        <li>Yong Bonaobra</li>
+        <li>Ling Bonaobra</li>
+        <li>Justin Clyde Dioquino</li>
+        <li>Jham Rhadke</li>
+        <li>Jassy Joy Borras</li>
+        <li>Ronie Borras</li>
+        <li>Thea Katrina Borras</li>
+        <li>Rhona Borras</li>
+        <li>Patricia Louis Mata</li>
+        <li>Princess Faye Dioquino</li>
+        <li>Patrick Mata</li>
+        <li>Joan Celador</li>
+        <li>Jessica Mae Dioquino</li>
+        <li>Cyrus Mañulit</li>
+        <li>Zyrel Valenzuela</li>
+        <li>Chona Basallote</li>
+        <li>Salvador Basallote</li>
+        <li>Zandra Piaca</li>
+        <li>Rey Piaca</li>
+        <li>Rosana Ballarbare</li>
+        <li>Alberto Ballarbare</li>
+        <li>Carilou Barrios</li>
+        <li>Bernard Aries Barrios</li>
+        <li>Aldin Balaguer</li>
+        <li>Antonio Balaguer</li>
+        <li>Evelyn Marquez</li>
+        <li>April Barcoma</li>
+        <li>Amira Kate Atun</li>
+        <li>Joy Butial</li>
+        <li>Domingo Borras</li>
+        <li>Dan Natividad</li>
+        <li>Jimmy Lii</li>
+      </ul>
+    </div>
+
+    <div class="friends-ninong">
+    <div class="guest-group">
+      <h3>Ninong & Ninang</h3>
+      <ul class="single">
+        <li>Louie John Cielo</li>
+        <li>Jun Aguas</li>
+        <li>Ferdinand Armedilla</li>
+        <li>Amadeo Bataller</li>
+        <li>Ronnie Butial</li>
+        <li>Raul Angelo Bongalon</li>
+        <li>Nilda Bonaobra</li>
+        <li>Cherrel Binalla</li>
+        <li>Ma. Kristina Zantua</li>
+        <li>Cherry Acosta</li>
+        <li>Elizabeth Budy</li>
+        <li>Ma. Isabel Barela</li>
+      </ul>
+    </div>
+
+    <div class="guest-group">
+      <h3>Wedding Party</h3>
+      <ul class="single">
+        <li>Alvin Atun</li>
+        <li>Khiet Maranan</li>
+        <li>Analiza Bonayon</li>
+        <li>Jude Clarence Dioquino</li>
+        <li>Milarose C. Natividad</li>
+        <li>Jayvee Marbella</li>
+        <li>Andrea Bataller</li>
+        <li>Jade Lladone</li>
+        <li>Marie Jane Mata</li>
+        <li>Rowel Bigata</li>
+        <li>Ashley Nicole Bigtas</li>
+        <li>Mark Zaldy Besorio</li>
+        <li>Shiara Mae Besorio</li>
+        <li>Jhamer Patrick Mata</li>
+        <li>Carl Justine Batalla</li>
+        <li>Bab Zander Basallote</li>
+        <li>Prince Xian Dioquino</li>
+        <li>Markizha Claire Bataller</li>
+        <li>Olly Maxime Dioquino</li>
+        <li>Markelzhie Claire Bataller</li>
+      </ul>
+    </div>
+    </div>
+    
+    
+  </main>
+
+  <footer>
+    With love, Jhie & Jhom 💕
+  </footer>
+
+</body>
+</html>
