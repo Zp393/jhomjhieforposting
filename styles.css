@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #f8f4ec url('images/paper-texture1.jpg') no-repeat center center; /* Center the image */
+  background: #f8f4ec url('images/background.jpg') no-repeat center center; /* Center the image */
   background-size: cover; /* Scale to cover the entire area */
   background-attachment: fixed; /* Fixes the background image */
   color: #333;
@@ -568,11 +568,11 @@ header .wedding-date {
 }
 
 .countdown-bg {
-  background-image: url('images/IMG_5136.jpg');
+  background-image: url('images/count.jpg');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  padding: 35rem 2rem;
+  padding: 23rem 2rem;
   color: #fff;
   text-align: center;
   position: relative;

@@ -39,7 +39,7 @@ const questions = document.querySelectorAll('.faq-question');
 
 // Countdown Timer
 const countdown = document.getElementById("countdown");
-const weddingDate = new Date("2025-06-18T15:00:00").getTime();
+const weddingDate = new Date("2045-05-18T15:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
