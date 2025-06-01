@@ -28,7 +28,7 @@ body {
   justify-content: flex-end; /* Align items to the right */
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #fff8dc;
+  background-color: transparent;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -46,8 +46,9 @@ body {
 }
 
 .nav-links a {
+  font-size: 1.5rem;
   text-decoration: none;
-  color: #5f4033; /* Text color */
+  color: black; /* Text color */
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -146,7 +147,7 @@ header .wedding-date {
 .name {
   position: relative;
   top: -10px; /* Adjust as needed */
-  background: url(images/paper-texture1.jpg)  no-repeat center center;
+  background: rgb(247, 233, 221);
   padding: 0 10px;
   font-weight: 500;
   font-size: 1rem;
